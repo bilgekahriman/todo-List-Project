@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+    <!-- CSS doc link-->
+    <link rel="stylesheet" href="./global.css">
+
+    <title>Todo List</title>
+</head>
+
+<body>
+
+    <div id="allTodoPart">
+
+        <div class="card row" style=" margin-top:20px; width: 30%; margin-left:40px ; justify-content: space-between; max-width: 20rem;">
+            <div class="card-header" style="display:flex; justify-content: space-between;">Todo List
+                <div class="clockTime" style="display:flex; justify-content: right;"> </div>
+            </div>
+
+            <div class="card-body">
+                <form id="todo-form" name="form">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input class="form-control" type="text" name="todo" id="todo" placeholder="Bir Todo Girin">
+                            <br>
+
+                            <input class="form-control" type="date" name="todoDate" id="date" placeholder="gg.aa.yyyy">
+
+                        </div>
+
+                    </div>
+                    <button id="myButton" type="submit" class="btn btn-danger">Todo Ekleyin</button>
+                    <hr>
+                </form>
+
+            </div>
+
+            <div class="card-body">
+                <hr>
+                <h5 class="card-title" id="tasks-title">Todolar</h5>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="filter" id="filter" placeholder="Bir Todo Arayın">
+                    </div>
+                </div>
+
+                <hr>
+                <ul class="list-group"></ul>
+                <hr>
+                <a id="clear-todos" class="btn btn-dark" href="#">Tüm Taskları Temizleyin</a>
+            </div>
+        </div>
+
+        <!-- CALENDAR-->
+        <div id="generalCalendar" class="container-fluid">
+
+            <header>
+                <div>
+                    <div style=" display: flex; justify-content: flex-end; margin-top: 15px;">
+                        <div>
+                            <input type="month" class="form-control" name="todoDateCal" id="dateCalendar" data-role="datetimepicker" data-day="false">
+                        </div>
+                    </div>
+                </div>
+                <h4 id="calendarTitle" class="display-4 mb-4 text-center"> </h4>
+                <table id="calendarTable" class="table table-bordered table-responsive-xl" id="calendar">
+                    <thead>
+                        <tr>
+                            <th>Pazar</th>
+                            <th>Pazartesi</th>
+                            <th>Salı</th>
+                            <th>Çarşamba</th>
+                            <th>Perşembe</th>
+                            <th>Cuma</th>
+                            <th>Cumartesi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="calendar-body">
+
+                    </tbody>
+                </table>
+            </header>
+
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="todopr.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>,
+
+
+</body>
+
+</html>
